@@ -1,26 +1,213 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-jost);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #FAFCE8;
+  --bg-secondary: #F0EDD5;
+  --bg-dark: #091622;
+  --bg-dark-2: #0D1E2C;
+  --bg-forest: #0C2215;
+  --bg-forest-2: #112A1C;
+  --text-primary: #091622;
+  --text-on-dark: #FAFCE8;
+  --text-muted: #6B5E28;
+  --text-muted-on-dark: #A08B3A;
+  --accent-cta: #D44E10;
+  --accent-gold: #B89040;
+  --accent-gold-dark: #7A6A18;
+  --accent-glow: rgba(184, 144, 64, 0.18);
+  --border: rgba(9, 22, 34, 0.10);
+  --border-gold: rgba(184, 144, 64, 0.35);
+
+  --font-fraunces: 'Fraunces', serif;
+  --font-jost: 'Jost', sans-serif;
+
+  /* Symbol: black → deep navy (on light bg) */
+  --symbol-filter: brightness(0) saturate(100%) invert(10%) sepia(20%) saturate(900%) hue-rotate(175deg) brightness(88%);
+  /* Symbol: gold version */
+  --symbol-filter-gold: brightness(0) saturate(100%) invert(68%) sepia(55%) saturate(650%) hue-rotate(5deg) brightness(105%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg-primary: #091622;
+  --bg-secondary: #0D1E2C;
+  --bg-dark: #050D16;
+  --bg-dark-2: #091622;
+  --bg-forest: #0C2215;
+  --bg-forest-2: #112A1C;
+  --text-primary: #FAFCE8;
+  --text-on-dark: #FAFCE8;
+  --text-muted: #8B7830;
+  --text-muted-on-dark: #A08B3A;
+  --accent-cta: #D44E10;
+  --accent-gold: #B89040;
+  --accent-gold-dark: #7A6A18;
+  --accent-glow: rgba(184, 144, 64, 0.15);
+  --border: rgba(250, 252, 232, 0.08);
+  --border-gold: rgba(184, 144, 64, 0.30);
+
+  /* Symbol: black → ivory (on dark bg) */
+  --symbol-filter: brightness(0) invert(1);
+  /* Symbol: gold version */
+  --symbol-filter-gold: brightness(0) saturate(100%) invert(68%) sepia(55%) saturate(650%) hue-rotate(5deg) brightness(105%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-jost);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+/* ─── Layout ─── */
+.content-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+@media (min-width: 640px) {
+  .content-container { padding: 0 1.75rem; }
+}
+@media (min-width: 1024px) {
+  .content-container { padding: 0 2.5rem; }
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-cta);
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  border-radius: 1px;
+  font-family: var(--font-jost);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 78, 16, 0.35);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  padding: 0.875rem 2rem;
+  border-radius: 1px;
+  font-family: var(--font-jost);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 0.875rem 2rem;
+  border-radius: 1px;
+  font-family: var(--font-jost);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background: var(--accent-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+/* ─── Marquee ─── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* ─── Keyframes ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes slow-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.06; }
+  50% { opacity: 0.12; }
+}
+@keyframes draw-line {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+.animate-float { animation: float 7s ease-in-out infinite; }
+.animate-slow-rotate { animation: slow-rotate 90s linear infinite; }
+.animate-glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
+
+/* ─── Text gradient ─── */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--accent-gold-dark), var(--accent-gold), #D4B060, var(--accent-gold));
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
