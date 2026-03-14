@@ -40,6 +40,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large media files — upload directly to Netlify
-public/testimonials/*.mov
-public/testimonials/*.mp4
