@@ -9,8 +9,8 @@ const offers = [
   {
     name: 'The First Session',
     price: '$175',
-    description: "For new clients ready to experience the work. In one complete 1:1 session, Lyda maps what's at the root of what you're carrying, gives you a direct experience of the ART Method, and creates a personalized path forward.",
-    note: 'If you want to continue, the next step is Regulate & Rise, a 4-week program designed to go deeper. Most clients who experience this session choose to.',
+    description: "For new patients ready to experience the work. In one complete 1:1 session, Lyda maps what's at the root of what you're carrying, gives you a direct experience of the ART Method, and creates a personalized path forward.",
+    note: 'If you want to continue, the next step is Regulate & Rise, a 4-week program designed to go deeper. Most patients who experience this session choose to.',
     cta: 'Book Your Session',
     href: ACUITY_URL,
     primary: true,

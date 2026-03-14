@@ -114,7 +114,7 @@ export function Mirror() {
               fontFamily: 'var(--font-jost)',
               marginBottom: '1.5rem',
             }}>
-              The things she can&apos;t say out loud
+              The things you can&apos;t say out loud
             </p>
           </ScrollReveal>
           {internals.map((line, i) => (

@@ -76,7 +76,7 @@ export function About() {
             {[
               "Lyda's journey began in 2015, not in a clinic, but in the middle of her own pain. After her parents' divorce, the grief, anger, blame, and avoidance she was carrying were eating her alive from the inside. She knew something had to change.",
               "In 2018, she was introduced to EFT tapping. For the first time, she felt what peace could actually feel like in her body. Not as a concept. In her body. In 2019, she enrolled in a four-year doctoral program in Acupuncture and Chinese Medicine, was introduced to Reiki, and opened her private practice, helping people through tapping and Reiki while still in school.",
-              "It wasn't until 2023 and 2024, in her final years of clinical training, that she began integrating all three modalities in the same session. Something incredible happened. Clients were healing more deeply, uncovering important truths, finding peace faster than she had ever seen. That's how the ART Method was born: discovered, not invented.",
+              "It wasn't until 2023 and 2024, in her final years of clinical training, that she began integrating all three modalities in the same session. Something incredible happened. Patients were healing more deeply, uncovering important truths, finding peace faster than she had ever seen. That's how the ART Method was born: discovered, not invented.",
             ].map((para, i) => (
               <ScrollReveal key={i} delay={0.35 + i * 0.1}>
                 <p style={{

@@ -6,13 +6,13 @@ import { ScrollReveal } from './ScrollReveal'
 const before = [
   "Anxious. Always on. Never fully off.",
   "Exhausted in a way sleep doesn't fix.",
-  "Losing herself in what she does for everyone else.",
+  "Losing yourself in what you do for everyone else.",
 ]
 
 const after = [
-  'Regulated. Calm. Safe in her own skin.',
-  'Clear. Present. Trusting herself again.',
-  'Remembering who she is.',
+  'Regulated. Calm. Safe in your own skin.',
+  'Clear. Present. Trusting yourself again.',
+  'Remembering who you are.',
 ]
 
 export function Transformation() {

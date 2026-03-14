@@ -67,7 +67,7 @@ export function Remote() {
                 fontSize: 'clamp(1rem, 2vw, 1.15rem)',
                 lineHeight: 1.7,
               }}>
-                Lyda works with clients anywhere in the world.<br />
+                Lyda works with patients anywhere in the world.<br />
                 <span style={{ fontSize: 'clamp(0.85rem, 1.6vw, 0.95rem)', opacity: 0.7 }}>
                   If you are in the San Diego area, you can experience in-person sessions until May.
                 </span>
