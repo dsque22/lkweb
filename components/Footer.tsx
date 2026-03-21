@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-const INSTAGRAM_URL = '#'   // PLACEHOLDER
+const INSTAGRAM_URL = 'https://www.instagram.com/drlydakermani/'
 const SUBSTACK_URL = 'https://substack.com/@drlydakermani'
 const ACUITY_URL = 'https://bookwithlydakermani.as.me/discoverysession'
 

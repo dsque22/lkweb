@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${jost.variable} dark`}
+      className={`${fraunces.variable} ${jost.variable}`}
       suppressHydrationWarning
     >
       <body>

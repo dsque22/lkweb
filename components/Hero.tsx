@@ -145,7 +145,7 @@ export function Hero() {
 
           {/* Dream outcome line — arrives after headline settles */}
           <motion.div
-            style={{ marginBottom: '1.75rem' }}
+            style={{ marginBottom: '1.5rem' }}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
@@ -160,12 +160,11 @@ export function Hero() {
               color: 'var(--text-primary)',
               opacity: 0.82,
             }}>
-              Calm in your chest. Clear in your mind.<br />
-              Trusting yourself again.
+              Anxiety, Stress, Burnout regulation for high-functioning people who are ready to feel peace.
             </p>
           </motion.div>
 
-          {/* Subhead */}
+          {/* Dream outcome — calm/clear/trusting */}
           <motion.p
             style={{
               fontFamily: 'var(--font-jost)',
@@ -178,25 +177,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            Nervous system regulation for high-functioning people who are ready to stop holding it together alone.
-          </motion.p>
-
-          {/* Specialty tags */}
-          <motion.p
-            style={{
-              fontFamily: 'var(--font-jost)',
-              fontSize: '0.65rem',
-              fontWeight: 500,
-              textTransform: 'uppercase',
-              letterSpacing: '0.18em',
-              color: 'var(--accent-gold)',
-              marginBottom: '2rem',
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.55 }}
-          >
-            Anxiety · Burnout · Stress
+            Calm in your chest, clear in your mind, trusting yourself again.
           </motion.p>
 
           {/* CTAs */}

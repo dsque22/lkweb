@@ -86,7 +86,7 @@ export function Remote() {
                 lineHeight: 1.85,
                 marginBottom: '1.5rem',
               }}>
-                Clients in virtual sessions report the same sensations as in-person: heat, release, a felt shift in the body, without a needle in sight. That&apos;s not a coincidence. It&apos;s how energy medicine works.
+                Clients in virtual sessions report the same sensations as in-person: release, a felt shift in the body, without a needle in sight. That&apos;s not a coincidence. It&apos;s how energy medicine works.
               </p>
             </ScrollReveal>
 
