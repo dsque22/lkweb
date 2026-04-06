@@ -19,7 +19,7 @@ const offers = [
   },
   {
     name: 'Regulate & Rise',
-    price: '$1,111',
+    price: '$1,200',
     description: '4 weeks. 4 sessions. One specific pattern, problem, or theme. Addressed at every layer: nervous system, energy body, mind, and emotions.',
     note: undefined as string | undefined,
     includes: ['4 weekly 1:1 sessions', 'Chinese herbal prescription', 'Personalized homework + integration exercises', 'Check-in follow-up'],
